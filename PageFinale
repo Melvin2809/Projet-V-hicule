@@ -1,0 +1,79 @@
+package Systeme;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class PageFinale {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					PageFinale window = new PageFinale();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public PageFinale() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.WHITE);
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(Color.GRAY);
+		panel.setBounds(247, 0, 203, 278);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JButton btnNewButton_3 = new JButton("Retour Menu");
+		btnNewButton_3.setBounds(41, 102, 108, 22);
+		panel.add(btnNewButton_3);
+		
+		JLabel lblNewLabel = new JLabel("Merci pour votre commande !");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblNewLabel.setBounds(27, 27, 208, 16);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Certificat de cession");
+		btnNewButton.setBounds(53, 66, 150, 22);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("Bon de commande");
+		btnNewButton_1.setForeground(Color.BLACK);
+		btnNewButton_1.setBackground(Color.WHITE);
+		btnNewButton_1.setBounds(27, 112, 197, 22);
+		frame.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("Demande d'immatriculation");
+		btnNewButton_2.setBounds(27, 159, 203, 22);
+		frame.getContentPane().add(btnNewButton_2);
+	}
+
+}
